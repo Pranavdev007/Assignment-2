@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OUR STORE</title>
+    <link rel="stylesheet" type="text/css" href="/store.css" />
+  </head>
+  <body>
+    <h1>OUR STORE</h1>
+
+    <div class="button" id="myBtn">
+      <button id="all" class="btn active" onclick="filterSelection('all')">
+        ALL
+      </button>
+      <button id="cakes" class="btn" onclick="filterSelection('cakes')">
+        CAKES
+      </button>
+      <button id="cupcakes" class="btn" onclick="filterSelection('cupcakes')">
+        CUPCAKES
+      </button>
+     
+      <button id="sweets" class="btn" onclick="filterSelection('sweets')">
+        SWEETS
+      </button>
+      <button id="nuts" class="btn" onclick="filterSelection('doughnuts')">
+        DOUGHNUTS
+      </button>
+    </div>
+    <input
+      type="text"
+      id="search"
+      onkeyup="myFunction()"
+      placeholder="items...."
+      title="Type in a name"
+    />
+
+    <div id="items" class="container">
+        <div class="filter sweets">
+            <img src="images/sweet12.jpg" height="200px" width="100%" /><span
+              class="itemname"
+              >Ras malai</span
+            ><span class="price">$10</span>
+          </div>
+          <div class="filter doughnuts">
+            <img src="images/nut2.jpg" height="200px" width="100%" /><span
+              class="itemname"
+              >Glazed Donut</span
+            ><span class="price">$10</span>
+          </div>
+      <div class="filter cakes">
+        <img src="images/cake15.jpg" height="200px" width="100%" /><span
+          class="itemname"
+          >Strawberry cake</span
+        ><span class="price">$10</span>
+      </div>
+      <div class="filter cakes">
+        <img src="images/cake2.jpg" height="200px" width="100%" /><span
+          class="itemname"
+          >Chocolate cake</span
+        ><span class="price">$10</span>
+      </div>
+      <div class="filter sweets">
+        <img src="images/sweet2.jpg" height="200px" width="100%" /><span
+          class="itemname"
+          >Kaju KatliBarfi</span
+        ><span class="price">$10</span>
+      </div>
+      <div class="filter cakes">
+        <img src="images/cake3.jpg" height="200px" width="100%" /><span
+          class="itemname"
+          >BlackForest cake</span
+        ><span class="price">$10</span>
+      </div>
+      <div class="filter doughnuts">
+        <img src="images/nut1.jpg" height="200px" width="100%" /><span
+          class="itemname"
+          >Chocolate Donut</span
+        ><span class="price">$10</span>
+      </div>
+      <div class="filter cupcakes">
+        <img src="images/cupcake4.jpg" height="200px" width="100%" /><span
+          class="itemname"
+          >Frost CupCake</span
+        ><span class="price">$10</span>
+      </div>
+
+      <div class="filter doughnuts">
+        <img src="images/nut3.jpg" height="200px" width="100%" /><span
+          class="itemname"
+          >Yeast Donut</span
+        ><span class="price">$10</span>
+      </div>
+      <div class="filter sweets">
+        <img src="images/sweet1.jpg" height="200px" width="100%" /><span
+          class="itemname"
+          >Rasagulla</span
+        ><span class="price">$10</span>
+      </div>
+      <div class="filter doughnuts">
+        <img src="images/nut4.jpg" height="200px" width="100%" /><span
+          class="itemname"
+          >Creamy Donut</span
+        ><span class="price">$10</span>
+      </div>
+      <div class="filter sweets">
+        <img src="images/sweet3.jpg" height="200px" width="100%" /><span
+          class="itemname"
+          >GulabJamun</span
+        ><span class="price">$10</span>
+      </div>
+    </div>
+    <script src="/store.js"></script>
+    <script>
+      function myFunction() {
+        var input = document.getElementById("search");
+        var filterr = input.value.toLowerCase();
+        var nodes = document.getElementsByClassName("filter");
+        for (i = 0; i < nodes.length; i++) {
+          if (nodes[i].innerText.toLowerCase().includes(filterr)) {
+            nodes[i].style.display = "block";
+          } else {
+            nodes[i].style.display = "none";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
